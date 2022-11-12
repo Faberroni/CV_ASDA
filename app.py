@@ -27,13 +27,7 @@ app = Flask(__name__)
 # Check https://keras.io/applications/
 # or https://www.tensorflow.org/api_docs/python/tf/keras/applications
 
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
-model = MobileNetV2(weights='imagenet')
 
-print('Model loaded. Check http://127.0.0.1:5000/')
-
-
-# Model saved with Keras model.save()
 MODEL_PATH = 'models/your_model.h5'
 
 # Load your own trained model
