@@ -122,7 +122,7 @@ function predictImage(image) {
 }
 
 function displayImage(image, id) {
-  // display image on given id <img> element
+  // display image on given id <img> elements
   let display = document.getElementById(id);
   display.src = image;
   show(display);
