@@ -21,7 +21,7 @@ from util import base64_to_pil
 
 
 # Declare a flask app
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 # You can use pretrained model from Keras
@@ -52,13 +52,13 @@ def model_predict(img, model):
     return preds
 
 
-@app.route('/', methods=['GET'])
+@application.route('/', methods=['GET'])
 def index():
     # Main page
     return render_template('index.html')
 
 
-@app.route('/predict', methods=['GET', 'POST'])
+@application.route('/predict', methods=['GET', 'POST'])
 def predict():
     if request.method == 'POST':
         # Get the image from post request
@@ -85,7 +85,7 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(port=5002, threaded=False)
+    application.run(port=5002, threaded=False)
 
 
 #tes buat git
